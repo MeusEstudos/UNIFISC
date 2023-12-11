@@ -1,0 +1,36 @@
+/* layout__menu--profile = LMP */
+
+.layout__menu--profile {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+        "LMP__photo LMP__name"
+        "LMP__photo LMP__position"
+    ;
+    column-gap: 15px;
+}
+
+.LMP__photo {
+    grid-area: LMP__photo;
+}
+
+.LMP__name {
+    grid-area: LMP__name;
+}
+
+.LMP__position {
+    grid-area: LMP__position;
+}
+
+.menu-profile__photo {
+    width: 2.5rem;
+    border-radius: 2rem;
+}
+
+.menu-profile__name {
+    font-weight: bold;
+}
+
+.menu-profile__position {
+    font-size: small;
+}

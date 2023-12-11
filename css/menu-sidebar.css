@@ -1,0 +1,29 @@
+.menu {
+	background-color: #f0f0f0;
+	height: 100vh;
+}
+
+.menu--icon {
+	width: 55px;
+}
+
+.menu--text {
+	display: none;
+	width: 140px;
+	margin-left: -20px;
+
+	@media (max-width: 595px) {
+		margin: 16px 0 0 -20px;
+	}
+}
+
+#button--hamburguer {
+	cursor: pointer;
+	background-color: #fff;
+	padding: 10px 10px 10px 0;
+	border: none;
+}
+
+.menu--text.show {
+	display: block;
+}

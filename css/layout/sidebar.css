@@ -1,0 +1,41 @@
+/* layout__sidebar = LS */
+
+.layout__sidebar {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+        "LS__menu--icon LS__menu--text"
+    ;
+    padding-top: 65px;
+    height: 100vh;
+}
+
+.LS__menu--icon {
+    grid-area: LS__menu--icon;
+}
+
+.LS__menu--text {
+    grid-area: LS__menu--text;
+}
+
+#title-project__sidebar {
+    display: none;
+}
+
+#menu-profile__sidebar {
+    display: none;
+}
+
+@media (max-width: 595px) {
+    #title-project__sidebar {
+        display: block;
+        margin-left: 15px;
+    }
+    
+    #menu-profile__sidebar {
+        display: block;
+        position: relative;
+        top: -48px;
+        left: 7px;
+    }
+}

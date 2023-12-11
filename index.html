@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.cdnfonts.com/css/lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="css/global.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
+    <link href="css/menu-sidebar.css" rel="stylesheet">
+    <link href="css/input-search.css" rel="stylesheet">
+    <link href="css/layout/container.css" rel="stylesheet">
+    <link href="css/layout/sidebar.css" rel="stylesheet">
+    <link href="css/layout/header.css" rel="stylesheet">
+    <link href="css/layout/menu-profile.css" rel="stylesheet">
+    <link href="css/layout/dashboard.css" rel="stylesheet">
+    <link href="css/layout/list.css" rel="stylesheet">
+    <link href="css/layout/filter-month.css" rel="stylesheet">
+    <link href="css/layout/start.css" rel="stylesheet">
+    
+
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="layout__container">
+        <!-- Sidebar -->
+        <sidebar class="LC__sidebar layout__sidebar menu">
+            <!-- Menu icon sempre ativa -->
+            <div class="menu--icon LS__menu--icon">
+                <!-- Menu profile -->
+                <div id="menu-profile__sidebar">
+                    <img src="images/Marina Micas Jardim.png" alt="Mulher morena de cabelo curto com franjas usando camiseta de gola branca." class="menu-profile__photo">
+                </div>
+
+                <!-- Title project -->
+                <strong id="title-project__sidebar">
+                    <i class="fa-solid fa-layer-group"></i>
+                </strong>
+
+                <a class="nav-link active" href="#" id="start-link">
+                    <i class="fa-solid fa-house" data-bs-toggle="tooltip" data-bs-placement="right" title="Início"></i>
+                </a>
+                <a class="nav-link" href="#" id="dashboard-link">
+                    <span><i class="fa-solid fa-chart-line" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard"></i></span>
+                </a>
+                <a class="nav-link" href="#" id="list-link">
+                    <span><i class="fa-solid fa-list" data-bs-toggle="tooltip" data-bs-placement="right" title="Listagem de notas emitidas"></i></span>
+                </a>
+            </div>
+
+            <!-- Menu text que será oculta/exibida -->
+            <div class="menu--text LS__menu--text">
+                <!-- Menu profile -->
+                <div id="menu-profile__sidebar">
+                    <span class="menu-profile__name" style="position: relative; top: -9px; left: 9px;"> Marina Micas</span>
+                </div>
+
+                <!-- Title project -->
+                <strong id="title-project__sidebar">
+                    UNIFISC
+                </strong>
+
+                <a class="nav-link active" href="#" id="start-link">
+                    Início
+                </a>
+                <a class="nav-link" href="#" id="dashboard-link">
+                    Dashboard
+                </a>
+                <a class="nav-link" href="#" id="list-link">
+                    Listagem
+                </a>
+            </div>
+        </sidebar>
+
+        <!-- Header -->
+        <header class="LC__header layout__header">
+            <!-- Button hidden/show menu text -->
+            <button id="button--hamburguer" class="LH__button--hamburguer">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <!-- Title project -->
+            <strong class="LH__title--project" id="title--project">
+                <i class="fa-solid fa-layer-group"></i>
+                UNIFISC - União de notas fiscais
+            </strong>
+
+            <!-- Search -->
+            <form class="form-inline LH__search input__icon">
+                <i class="fas fa-magnifying-glass"></i>
+                <input class="form-control mr-sm-2" type="search" placeholder="Pesquise" aria-label="Search">
+            </form>
+
+            <!-- Menu profile -->
+            <div class="LH__menu--profile layout__menu--profile" id="menu--profile">
+                <img src="images/Marina Micas Jardim.png" alt="Mulher morena de cabelo curto com franjas usando camiseta de gola branca." class="menu-profile__photo LMP__photo">
+                <span class="menu-profile__name LMP__name">Marina Micas</span>
+                <span class="menu-profile__position LMP__position">UX/UI developer</span>
+            </div>
+        </header>
+
+        <!-- Page -->
+        <page class="LC__body">
+            <main role="main">
+                <div id="main-content">
+                    <!-- Page content as clicked on the sidebar -->
+                </div>
+            </main>
+        </page>
+    </div>
+
+    <script src="js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="js/menu-sidebar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+@import url('https://fonts.cdnfonts.com/css/lato');
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #555555;
+}
+
+.alert {
+    margin-bottom: unset;
+}
+
+.bolder {
+    font-weight: bolder;
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
+
+.nav-link:focus, .nav-link:hover {
+    color: #6c757d;
+    font-weight: bolder;
+}

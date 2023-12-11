@@ -1,0 +1,61 @@
+/* layout__filter-month = LFM */
+
+.layout__filter-month {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-areas: 
+        "LFM__text-month LFM__month-issuance LFM__milling-month LFM__payment-month"
+    ;
+    column-gap: 20px;
+    row-gap: 20px;
+    border: 1px solid #6c757d;
+    border-radius: .25rem;
+    padding: 10px;
+}
+
+.LFM__text-month {
+    grid-area: LFM__text-month;
+    background-color: #f2f2f2;
+    margin: -10px;
+    color: #555;
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    padding: 27px 0;
+    border-radius: .25rem 0 0 .25rem;
+}
+
+.LFM__month-issuance {
+    grid-area: LFM__month-issuance;
+    margin-left: 10px;
+    align-self: center;
+}
+
+.LFM__milling-month {
+    grid-area: LFM__milling-month;
+    align-self: center;
+}
+
+.LFM__payment-month {
+    grid-area: LFM__payment-month;
+    align-self: center;
+}
+
+@media (max-width: 900px) {
+    .layout__filter-month {
+        grid-template-columns: repeat(3, auto);
+        grid-template-areas: 
+            "LFM__text-month LFM__text-month LFM__text-month"
+            "LFM__month-issuance LFM__milling-month LFM__payment-month"
+        ;
+    }
+
+    .LFM__text-month {
+        height: 35px;
+        padding: 3px 0;
+    }
+
+    .LFM__month-issuance, .LFM__milling-month, .LFM__payment-month {
+        justify-self: center;
+    }
+}

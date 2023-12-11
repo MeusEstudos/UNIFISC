@@ -1,0 +1,29 @@
+/* layout__container = LC */
+
+.layout__container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+        "LC__sidebar LC__header"
+        "LC__sidebar LC__body"
+    ;
+    height: 100vh;
+}
+
+.LC__sidebar {
+    grid-area: LC__sidebar;
+}
+
+.LC__header {
+    grid-area: LC__header;
+    color: #6c757d;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.LC__body {
+    grid-area: LC__body;
+    margin-top: 10px;
+    overflow: auto;
+    padding: 20px;
+}

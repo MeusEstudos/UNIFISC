@@ -1,0 +1,59 @@
+<h3>Dashboard de notas fiscais</h3>
+
+<div class="layout__dashboard">
+    <div class="dropdown LD__filter-time">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="time-filter" data-bs-toggle="dropdown" aria-expanded="false">
+            Filtre os totais das notas fiscais de acordo com o período do ano de 2023
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="time-filter">
+            <li><a class="dropdown-item" href="#" data-value="month">Mensal &nbsp;</a></li>
+            <li><a class="dropdown-item" href="#" data-value="quarter">Trimestral &nbsp;</a></li>
+            <li><a class="dropdown-item" href="#" data-value="year">Anual &nbsp;</a></li>
+        </ul>
+    </div>
+
+    <div id="total-issued-item" class="LD__note-issued">
+        Total Emitido: &nbsp; 
+        <span id="total-issued" class="bolder"></span>
+    </div>
+        
+    <div id="total-overdue-item" class="LD__expired-note alert alert-danger align-items-center" role="alert">
+        <i class="fa-solid fa-file-circle-minus"></i>
+        &nbsp; &nbsp; Total Vencido: &nbsp; 
+        <span id="total-overdue" class="bolder"></span>
+    </div>
+
+    <div id="total-unbilled-item" class="LD__unpaid-note alert alert-warning align-items-center" role="alert">
+        <i class="fa-solid fa-file-circle-exclamation"></i>
+        &nbsp; &nbsp; Total Não Cobrado: &nbsp; 
+        <span id="total-unbilled" class="bolder"></span>
+    </div>
+
+    <div id="total-upcoming-item" class="LD__note-due alert alert-primary align-items-center" role="alert">
+        <i class="fa-solid fa-file"></i>
+        &nbsp; &nbsp; Total a Vencer: &nbsp; 
+        <span id="total-upcoming" class="bolder"></span>
+    </div>
+
+    <div id="total-paid-item" class="LD__note-paid alert alert-success align-items-center" role="alert">
+        <i class="fa-solid fa-file-circle-check"></i>
+        &nbsp; &nbsp; Total Pago: &nbsp; 
+        <span id="total-paid" class="bolder"></span>
+    </div>  
+    
+    <div class="card LD__overdue">
+        <div class="card-body">
+            <h5 class="card-title bolder">Inadimplência em 2023</h5>
+            <canvas id="overdue-chart"></canvas>
+        </div>
+    </div>
+
+    <div class="card LD__revenue">
+        <div class="card-body">
+            <h5 class="card-title bolder">Receita recebida em 2023</h5>
+            <canvas id="revenue-chart"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="../js/dashboard.js" defer></script>

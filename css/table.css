@@ -1,0 +1,75 @@
+#invoices-table tbody tr {
+    background-color: #f5f5f5; /* Cinza claro como cor de fundo padrão */
+}
+
+#invoices-table tbody tr:nth-child(odd) {
+    background-color: #ffffff; /* Alternando para branco em linhas ímpares */
+}
+
+.table-container {
+    max-height: calc(100vh - 272px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    border: 1px solid #6c757d;
+    border-radius: .25rem;
+    min-height: 303px;
+}
+
+.table-container thead th {
+    position: -webkit-sticky; /* Para compatibilidade com Safari */
+    position: sticky;
+    top: 0;
+    background: #6c757d;
+    color: #fff;
+    z-index: 10;
+}
+
+@media (max-width: 900px) {
+    /* Estilos para dispositivos com largura até 900px */
+    .table-container {
+        overflow-x: auto;
+    }
+
+    #invoices-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    #invoices-table thead {
+        display: none;
+    }
+
+    #invoices-table tbody {
+        display: block;
+    }
+
+    #invoices-table tbody tr {
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #invoices-table tbody td {
+        flex-basis: calc(41% - 10px);
+        margin-bottom: 5px;
+        text-align: left;
+        border: none;
+        position: relative;
+    }
+    
+    #invoices-table tbody td:nth-child(6),
+    #invoices-table tbody td:nth-child(7),
+    #invoices-table tbody td:nth-child(8) {
+        flex-basis: 40%;
+    }
+
+    #invoices-table tbody td:nth-child(1):before { content: "Nome do pagador: "; font-weight: bold; }
+    #invoices-table tbody td:nth-child(2):before { content: "ID da nota: "; font-weight: bold; }
+    #invoices-table tbody td:nth-child(3):before { content: "Data de emissão: "; font-weight: bold; }
+    #invoices-table tbody td:nth-child(4):before { content: "Data da cobrança: "; font-weight: bold; }
+    #invoices-table tbody td:nth-child(5):before { content: "Data do pagamento: "; font-weight: bold; }
+    #invoices-table tbody td:nth-child(6):before { content: "Valor da nota: "; font-weight: bold; }
+    #invoices-table tbody td:nth-child(7):before { content: "Doc. nota fiscal: "; font-weight: bold; }
+    #invoices-table tbody td:nth-child(8):before { content: "Doc. boleto bancário: "; font-weight: bold; }
+}

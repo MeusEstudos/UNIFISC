@@ -1,0 +1,17 @@
+/* Estilo do input com o ícone no placeholder */
+.input__icon {
+    position: relative;
+}
+
+.input__icon input {
+    border-radius: 18px;
+    padding-left: 45px; /* Ajuste conforme necessário para acomodar o ícone */
+}
+
+.input__icon i {
+    position: absolute;
+    left: 17px; /* Ajuste conforme necessário para posicionar o ícone */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #808080; /* Cor do ícone */
+}

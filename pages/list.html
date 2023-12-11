@@ -1,0 +1,90 @@
+<h3>Listagem de notas emitidas</h3>
+
+<div class="layout__list">
+    <!-- Filtro mensal -->
+    <div class="layout__filter-month LL__months">
+        <div class="LFM__text-month">
+            Filtro mensal
+        </div>
+
+        <!-- Filtro por mês de emissão da nota -->
+        <div class="LFM__month-issuance">
+            <label for="emission-month-filter">Emissão</label>
+            <div class="dropdown">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="emission-month-filter" data-bs-toggle="dropdown" aria-expanded="false">
+                    &nbsp;
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="emission-month-filter">
+                    <!-- Opções de meses -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Filtro por mês de cobrança -->
+        <div class="LFM__milling-month">
+            <label for="billing-month-filter">Cobrança</label>
+            <div class="dropdown" >
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="billing-month-filter" data-bs-toggle="dropdown" aria-expanded="false" data-value="">
+                    &nbsp;
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="billing-month-filter">
+                    <!-- Opções de meses -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Filtro por mês de pagamento -->
+        <div class="LFM__payment-month">
+            <label for="payment-month-filter">Pagamento</label>
+            <div class="dropdown" >
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="payment-month-filter" data-bs-toggle="dropdown" aria-expanded="false" data-value="">
+                    &nbsp;
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="payment-month-filter">
+                    <!-- Opções de meses -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtro por status da nota -->
+    <div class="LL__note-status">
+        <label for="status-filter" style="padding-top:5px; margin-right:10px;">Status</label>
+        <div class="dropdown" >
+            <button class="btn btn-outline-secondary dropdown-toggle" id="status-filter" type="button" data-bs-toggle="dropdown" aria-expanded="false" data-value="">
+                 &nbsp;
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="status-filter">
+                <li><a class="dropdown-item" href="#" data-value="">Todos</a></li>
+                <li><a class="dropdown-item" href="#" data-value="Emitida">Emitida</a></li>
+                <li><a class="dropdown-item" href="#" data-value="Cobrança realizada">Cobrança realizada</a></li>
+                <li><a class="dropdown-item" href="#" data-value="Pagamento em atraso">Pagamento em atraso</a></li>
+                <li><a class="dropdown-item" href="#" data-value="Pagamento realizado">Pagamento realizado</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Tabela com dados detalhados -->
+    <div class="table-container LL__table">
+        <table class="table" id="invoices-table">
+            <thead>
+                <tr>
+                    <th>Nome do pagador</th>
+                    <th>ID da nota</th>
+                    <th>Data de emissão</th>
+                    <th>Data da cobrança</th>
+                    <th>Data do pagamento</th>
+                    <th>Valor da nota</th>
+                    <th>Doc. nota fiscal</th>
+                    <th>Doc. boleto bancário</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="invoices-table-body">
+                <!-- As notas fiscais serão inseridas aqui dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="../js/list.js" defer></script>

@@ -1,0 +1,60 @@
+/* layout__header = LH */
+
+.layout__header {
+    display: grid;
+    grid-template-columns: 20px auto 1fr auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "LH__button--hamburguer LH__title--project LH__search LH__menu--profile"
+    ;
+    column-gap: 66px;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.LH__button--hamburguer {
+    grid-area: LH__button--hamburguer;
+}
+
+.LH__title--project {
+    grid-area: LH__title--project;
+}
+
+.LH__search {
+    grid-area: LH__search;
+}
+
+.LH__menu--profile {
+    grid-area: LH__menu--profile;
+}
+
+@media (max-width: 950px) {
+    .layout__header {
+        grid-template-areas: 
+            "LH__button--hamburguer LH__title--project . LH__menu--profile"
+            "LH__button--hamburguer LH__search LH__search LH__menu--profile"
+        ;
+        padding: 15px 20px;
+        column-gap: 30px;
+    }
+    .LH__search {
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 595px) {
+    .layout__header {
+        grid-template-columns: 20px 1fr;
+        grid-template-areas: 
+            "LH__button--hamburguer LH__search"
+        ;
+    }
+
+    #title--project {
+        display: none;
+    }
+
+    #menu--profile {
+        display: none;
+    }
+}

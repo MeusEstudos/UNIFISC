@@ -1,0 +1,87 @@
+/* layout__dashboard = LD */
+
+.layout__dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+        "LD__filter-time LD__filter-time . ."
+        "LD__expired-note LD__unpaid-note LD__note-due LD__note-paid"
+        ". . . LD__note-issued"
+        "LD__overdue LD__overdue LD__revenue LD__revenue"
+    ;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 30px;
+}
+
+.LD__filter-time {
+    grid-area: LD__filter-time;
+}
+
+.LD__note-issued {
+    grid-area: LD__note-issued;
+    justify-self: end;
+    font-size: larger;
+}
+
+.LD__expired-note {
+    grid-area: LD__expired-note;
+}
+
+.LD__unpaid-note {
+    grid-area: LD__unpaid-note;
+}
+
+.LD__note-due {
+    grid-area: LD__note-due;
+}
+
+.LD__note-paid {
+    grid-area: LD__note-paid;
+}
+
+.LD__overdue {
+    grid-area: LD__overdue;
+    margin-top: 20px;
+}
+
+.LD__revenue {
+    grid-area: LD__revenue;
+    margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+    .layout__dashboard {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+            "LD__filter-time LD__filter-time"
+            "LD__expired-note LD__unpaid-note" 
+            "LD__note-due LD__note-paid"
+            "LD__note-issued LD__note-issued"
+            "LD__overdue LD__overdue" 
+            "LD__revenue LD__revenue"
+        ;
+    }
+}
+
+@media (max-width: 635px) {
+    .layout__dashboard {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "LD__filter-time"
+            "LD__expired-note" 
+            "LD__unpaid-note" 
+            "LD__note-due" 
+            "LD__note-paid"
+            "LD__note-issued"
+            "LD__overdue" 
+            "LD__revenue"
+        ;
+        column-gap: 0;
+    }
+
+    .dropdown-toggle {
+        white-space: unset;
+        text-align: left;
+    }
+}
