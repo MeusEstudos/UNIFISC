@@ -7,8 +7,12 @@ function loadPageContent(pageId) {
         "list-link": "list.html",
     };
 
+    const pageName = contentMap[pageId];
     // Injeta o conteúdo correspondente no elemento principal
-    $('#main-content').load(`pages/${contentMap[pageId]}`);
+    $.get(`pages/${pageName}`, (data) => {
+        $('#main-content').html(data);
+        console.info(`${pageName} loaded`)
+    });
 }
 
 $(document).ready(function() {
