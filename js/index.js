@@ -11,7 +11,6 @@ function loadPageContent(pageId) {
     // Injeta o conteúdo correspondente no elemento principal
     $.get(`pages/${pageName}`, (data) => {
         $('#main-content').html(data);
-        console.info(`${pageName} loaded`)
     }, 'html');
 }
 
