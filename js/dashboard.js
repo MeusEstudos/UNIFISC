@@ -2,7 +2,7 @@ $(document).ready(function() {
     // Simulando dados de notas fiscais
     let notas = [];
 
-    $.getJSON('../notas.json', function(data) {
+    $.getJSON('notas.json', function(data) {
         notas = data;
         updateCharts(currentFilter);
         updateTotals(currentFilter);
