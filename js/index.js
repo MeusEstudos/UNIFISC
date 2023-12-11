@@ -9,10 +9,10 @@ function loadPageContent(pageId) {
 
     const pageName = contentMap[pageId];
     // Injeta o conteúdo correspondente no elemento principal
-    $.get(UNIFISC/pages/${pageName}, (data) => {
+    $.get(`UNIFISC/pages/${pageName}`, (data) => {
         $('#main-content').html(data);
         console.info(`${pageName} loaded`)
-    });
+    }, 'html');
 }
 
 $(document).ready(function() {
