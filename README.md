@@ -92,7 +92,73 @@ O projeto está organizado da seguinte forma:
 
 10. Divirta-se desenvolvendo e utilizando o sistema!
 
-**Observação:** Certifique-se de ter uma conexão com a internet para carregar as bibliotecas externas utilizadas no projeto.
+**Observação:** Certifique-se de ter uma conexão com a internet para carregar as bibliotecas externas utilizadas no projeto. E quando terminar de clonar o projeto em sua máquina, você deve mudar as seguintes linhas de código de cada arquivo a seguir, pois essas alterações foram feitas para fazer com que o projeto funcione na Pages do GitHub:
+- arquivo: index.js (linha 10)
+
+De:
+```bash
+  const pageName = contentMap[pageId];
+  // Injeta o conteúdo correspondente no elemento principal
+  $.get(`pages/${pageName}`, (data) => {
+    $('#main-content').html(data);
+  }, 'html');
+```
+
+Para:
+```bash
+  // Injeta o conteúdo correspondente no elemento principal
+  $('#main-content').load(`pages/${contentMap[pageId]}`);
+```
+
+- arquivo: dashboard.js (linha 5)
+
+De:
+```bash
+  $.getJSON('notas.json', function(data) {
+```
+
+Para:
+```bash
+  $.getJSON('../notas.json', function(data) {
+```
+
+- arquivo: list.js (linha 30) 
+
+De:
+```bash
+  $.getJSON('notas.json', function (data) {
+```
+
+Para:
+```bash
+  $.getJSON('./notas.json', function (data) {
+```
+
+- arquivo: dashboard.html (linha 59)
+
+De:
+  ```bash
+  <script src="js/dashboard.js" defer></script>
+```
+
+Para:
+```bash
+  <script src="../js/dashboard.js" defer></script>
+```
+
+- arquivo: list.html (linha 90)
+
+De:
+```bash
+  <script src="js/list.js" defer></script>
+```
+
+Para:
+```bash
+  <script src="../js/list.js" defer></script>
+```
+
+Ou ao invés de realizar o clone do projeto, você pode baixar o arquivo compactado ([UNIFISC.rar](https://github.com/MeusEstudos/UNIFISC/blob/main/UNIFISC.rar)) dele, e nesse arquivo as alterações não precisam ser realizadas, basta seguir do passo 2 em diante das instruções de setup e uso.
 
 ## Demo do projeto na Pages do GitHub
 [UNIFISC](https://meusestudos.github.io/UNIFISC/)
