@@ -27,7 +27,7 @@ $(document).ready(function () {
 
     // Função para carregar as notas fiscais a partir de um arquivo JSON
     function loadInvoices() {
-        $.getJSON('./notas.json', function (data) {
+        $.getJSON('notas.json', function (data) {
             invoices = data;
             applyCachedFilters();
         }).fail(function (jqXHR, textStatus, error) {
