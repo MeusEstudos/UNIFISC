@@ -92,7 +92,7 @@ O projeto está organizado da seguinte forma:
 
 10. Divirta-se desenvolvendo e utilizando o sistema!
 
-**Observação:** Certifique-se de ter uma conexão com a internet para carregar as bibliotecas externas utilizadas no projeto. E quando terminar de clonar o projeto em sua máquina, você deve mudar as seguintes linhas de código de cada arquivo a seguir, pois essas alterações foram feitas para fazer com que o projeto funcione na Pages do GitHub:
+**Observação:** Certifique-se de ter uma conexão com a internet para carregar as bibliotecas externas utilizadas no projeto. E quando terminar de clonar o projeto em sua máquina, você deve mudar as seguintes linhas de código de cada arquivo a seguir, pois essas alterações foram feitas para fazer com que o projeto funcione no GitHub Pages:
 - arquivo: index.js (linha 10)
 
 De:
@@ -160,13 +160,11 @@ Para:
 
 Ou ao invés de realizar o clone do projeto, você pode baixar o arquivo compactado ([UNIFISC.rar](https://github.com/MeusEstudos/UNIFISC/blob/main/UNIFISC.rar)) dele, e nesse arquivo as alterações não precisam ser realizadas, basta seguir do passo 2 em diante das instruções de setup e uso.
 
-## Demo do projeto na Pages do GitHub
+## Demo do projeto no GitHub Pages
 [UNIFISC](https://meusestudos.github.io/UNIFISC/)
 
 ## Licença
-
 Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](https://mit-license.org/) para detalhes.
 
 ## Contato
-
 Para mais informações, entre em contato com o mantenedor do projeto pelo LinkedIn: [Marina Micas Jardim](https://www.linkedin.com/in/marinamicas/).
